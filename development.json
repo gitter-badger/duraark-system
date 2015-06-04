@@ -1,0 +1,51 @@
+{
+  "name": "duraark",
+  "namespace": "fraunhofer",
+  "id": "df24db56-3e4e-4772-8cb9-9d2a3f99c211",
+  "containerDefinitions": [
+    {
+      "type": "blank-container",
+      "id": "root",
+      "name": "root"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "name": "redis:latest",
+        "execute": {
+          "args": "-d -p 6379:6379"
+        }
+      },
+      "id": "redis$redis_latest",
+      "name": "redis"
+    }
+  ],
+  "topology": {
+    "containers": {
+      "root-24a2726d": {
+        "id": "root-24a2726d",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "root",
+        "type": "blank-container",
+        "contains": [
+          "redis-306968a5$redis_latest"
+        ],
+        "specific": {}
+      },
+      "redis-306968a5$redis_latest": {
+        "id": "redis-306968a5$redis_latest",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "redis$redis_latest",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "name": "redis:latest",
+          "execute": {
+            "args": "-d -p 6379:6379"
+          }
+        }
+      }
+    },
+    "name": "development"
+  }
+}

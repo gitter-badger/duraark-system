@@ -4,16 +4,12 @@ exports.root = {
   type: 'blank-container'
 };
 
-// Example
-//
-// exports.web = {
-//   type: 'docker',
-//     specific: {
-//       repositoryUrl: 'git@github.com:nearform/nscaledemoweb.git',
-//       execute: {
-//         // docker run <ARGS> image <EXEC>
-//         args: '-p 8000:8000 -d',
-//         exec: ''
-//       }
-//     }
-// };
+exports.redis = {
+  type: 'docker',
+  specific: {
+    name: 'redis',
+    execute: {
+      args: '-d -p 6379:6379'
+    }
+  }
+};
