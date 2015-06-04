@@ -21,6 +21,23 @@
       },
       "id": "sip$b5c247932d1caaf671490d922124fdbef1f8f057",
       "name": "sip"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
+        "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
+        "ignored": [
+          ".build"
+        ],
+        "execute": {
+          "args": "-p 4200:4200 -d",
+          "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+        },
+        "commit": "e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+      },
+      "id": "web$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+      "name": "web"
     }
   ],
   "topology": {
@@ -31,7 +48,8 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "sip-306968a5$b5c247932d1caaf671490d922124fdbef1f8f057"
+          "sip-306968a5$b5c247932d1caaf671490d922124fdbef1f8f057",
+          "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d"
         ],
         "specific": {}
       },
@@ -49,6 +67,25 @@
             "process": "app.js"
           },
           "commit": "b5c247932d1caaf671490d922124fdbef1f8f057"
+        }
+      },
+      "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d": {
+        "id": "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "web$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
+          "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
+          "ignored": [
+            ".build"
+          ],
+          "execute": {
+            "args": "-p 4200:4200 -d",
+            "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+          },
+          "commit": "e969ec2dc4180604d06678f9d26ccf2e12262f7d"
         }
       }
     },
