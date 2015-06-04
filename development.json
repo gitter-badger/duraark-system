@@ -7,6 +7,37 @@
       "type": "blank-container",
       "id": "root",
       "name": "root"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5006:5006 -d",
+          "process": "app.js"
+        },
+        "commit": "b7792ae185e9723f08245697f78be9021a7b24fe"
+      },
+      "id": "sip$b7792ae185e9723f08245697f78be9021a7b24fe",
+      "name": "sip"
+    },
+    {
+      "type": "docker",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
+        "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
+        "ignored": [
+          ".build"
+        ],
+        "execute": {
+          "args": "-p 8000:8000 -d",
+          "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+        },
+        "commit": "e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+      },
+      "id": "web$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+      "name": "web"
     }
   ],
   "topology": {
@@ -16,8 +47,46 @@
         "containedBy": "root-24a2726d",
         "containerDefinitionId": "root",
         "type": "blank-container",
-        "contains": [],
+        "contains": [
+          "sip-306968a5$b7792ae185e9723f08245697f78be9021a7b24fe",
+          "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+        ],
         "specific": {}
+      },
+      "sip-306968a5$b7792ae185e9723f08245697f78be9021a7b24fe": {
+        "id": "sip-306968a5$b7792ae185e9723f08245697f78be9021a7b24fe",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "sip$b7792ae185e9723f08245697f78be9021a7b24fe",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5006:5006 -d",
+            "process": "app.js"
+          },
+          "commit": "b7792ae185e9723f08245697f78be9021a7b24fe"
+        }
+      },
+      "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d": {
+        "id": "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+        "containedBy": "root-24a2726d",
+        "containerDefinitionId": "web$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+        "type": "docker",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
+          "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
+          "ignored": [
+            ".build"
+          ],
+          "execute": {
+            "args": "-p 8000:8000 -d",
+            "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+          },
+          "commit": "e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+        }
       }
     },
     "name": "development"

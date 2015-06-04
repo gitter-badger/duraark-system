@@ -3,7 +3,7 @@ exports.root = {
   type: 'blank-container'
 };
 
-exports.doc = {
+exports.sip = {
   type: 'docker',
   override: {
     process: {
