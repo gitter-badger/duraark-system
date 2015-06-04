@@ -14,7 +14,7 @@ exports.sip = {
     repositoryUrl: 'https://github.com/duraark/microservice-sip.git',
     processBuild: 'npm install',
     execute: {
-      args: '-p 5006:5006 -d',
+      args: '-p 5106:1337 -d',
       process: 'app.js'
     }
   }
