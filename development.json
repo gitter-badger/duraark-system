@@ -14,7 +14,7 @@
         "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
         "processBuild": "npm install",
         "execute": {
-          "args": "-p 5106:1337 -d",
+          "args": "-p 5104:5004 -d",
           "process": "app.js"
         },
         "commit": "b7792ae185e9723f08245697f78be9021a7b24fe"
@@ -45,7 +45,7 @@
           "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
           "processBuild": "npm install",
           "execute": {
-            "args": "-p 5106:1337 -d",
+            "args": "-p 5104:5004 -d",
             "process": "app.js"
           },
           "commit": "b7792ae185e9723f08245697f78be9021a7b24fe"

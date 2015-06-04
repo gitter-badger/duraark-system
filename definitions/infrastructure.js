@@ -14,7 +14,7 @@ exports.sip = {
     repositoryUrl: 'https://github.com/duraark/microservice-sip.git',
     processBuild: 'npm install',
     execute: {
-      args: '-p 5106:1337 -d',
+      args: '-p 5104:5004 -d',
       process: 'app.js'
     }
   }
@@ -32,7 +32,7 @@ exports.web = {
     processBuild: 'npm install; npm install bower; node_modules/.bin/bower install',
     ignored: ['.build'],
     execute: {
-      args: '-p 8000:8000 -d',
+      args: '-p 4200:4200 -d',
       process: 'DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve'
 //      cwd: 'web'
     }
