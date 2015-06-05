@@ -32,7 +32,7 @@ exports.web = {
     processBuild: 'npm install; npm install bower; node_modules/.bin/bower install',
     ignored: ['.build'],
     execute: {
-      args: '-p 4200:4200 -d',
+      args: '-p 443:4200 -d',
       process: 'DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve'
 //      cwd: 'web'
     }
