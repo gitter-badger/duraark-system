@@ -7,6 +7,6 @@ exports.id = 'df24db56-3e4e-4772-8cb9-9d2a3f99c211';
 
 exports.topology = {
   development: {
-    root: ['sip', 'web']
+    root: ['web']
   }
 };

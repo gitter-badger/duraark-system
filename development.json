@@ -11,20 +11,6 @@
     {
       "type": "docker",
       "specific": {
-        "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
-        "processBuild": "npm install",
-        "execute": {
-          "args": "-p 5104:5004 -d",
-          "process": "app.js"
-        },
-        "commit": "b5c247932d1caaf671490d922124fdbef1f8f057"
-      },
-      "id": "sip$b5c247932d1caaf671490d922124fdbef1f8f057",
-      "name": "sip"
-    },
-    {
-      "type": "docker",
-      "specific": {
         "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
         "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
         "ignored": [
@@ -34,9 +20,9 @@
           "args": "-p 4200:4200 -d",
           "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
         },
-        "commit": "e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+        "commit": "2c78b2dd843f5ebb264ead077623f287066ac0ac"
       },
-      "id": "web$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+      "id": "web$2c78b2dd843f5ebb264ead077623f287066ac0ac",
       "name": "web"
     }
   ],
@@ -48,31 +34,14 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "sip-306968a5$b5c247932d1caaf671490d922124fdbef1f8f057",
-          "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+          "web-306968a5$2c78b2dd843f5ebb264ead077623f287066ac0ac"
         ],
         "specific": {}
       },
-      "sip-306968a5$b5c247932d1caaf671490d922124fdbef1f8f057": {
-        "id": "sip-306968a5$b5c247932d1caaf671490d922124fdbef1f8f057",
+      "web-306968a5$2c78b2dd843f5ebb264ead077623f287066ac0ac": {
+        "id": "web-306968a5$2c78b2dd843f5ebb264ead077623f287066ac0ac",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "sip$b5c247932d1caaf671490d922124fdbef1f8f057",
-        "type": "docker",
-        "contains": [],
-        "specific": {
-          "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
-          "processBuild": "npm install",
-          "execute": {
-            "args": "-p 5104:5004 -d",
-            "process": "app.js"
-          },
-          "commit": "b5c247932d1caaf671490d922124fdbef1f8f057"
-        }
-      },
-      "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d": {
-        "id": "web-476e5833$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
-        "containedBy": "root-24a2726d",
-        "containerDefinitionId": "web$e969ec2dc4180604d06678f9d26ccf2e12262f7d",
+        "containerDefinitionId": "web$2c78b2dd843f5ebb264ead077623f287066ac0ac",
         "type": "docker",
         "contains": [],
         "specific": {
@@ -85,7 +54,7 @@
             "args": "-p 4200:4200 -d",
             "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
           },
-          "commit": "e969ec2dc4180604d06678f9d26ccf2e12262f7d"
+          "commit": "2c78b2dd843f5ebb264ead077623f287066ac0ac"
         }
       }
     },
