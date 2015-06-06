@@ -11,7 +11,7 @@
     {
       "type": "docker",
       "specific": {
-        "name": "duraark/workbench-ui:0.5.1",
+        "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
         "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
         "ignored": [
           ".build"
@@ -19,9 +19,10 @@
         "execute": {
           "args": "-p 443:4200 -d",
           "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
-        }
+        },
+        "commit": "6e21f4d0f6c5a2e61609e6fa23b162930209a9e5"
       },
-      "id": "web$duraark.workbench.ui_0.5.1",
+      "id": "web$6e21f4d0f6c5a2e61609e6fa23b162930209a9e5",
       "name": "web"
     }
   ],
@@ -33,18 +34,18 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "web-306968a5$duraark.workbench.ui_0.5.1"
+          "web-306968a5$6e21f4d0f6c5a2e61609e6fa23b162930209a9e5"
         ],
         "specific": {}
       },
-      "web-306968a5$duraark.workbench.ui_0.5.1": {
-        "id": "web-306968a5$duraark.workbench.ui_0.5.1",
+      "web-306968a5$6e21f4d0f6c5a2e61609e6fa23b162930209a9e5": {
+        "id": "web-306968a5$6e21f4d0f6c5a2e61609e6fa23b162930209a9e5",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "web$duraark.workbench.ui_0.5.1",
+        "containerDefinitionId": "web$6e21f4d0f6c5a2e61609e6fa23b162930209a9e5",
         "type": "docker",
         "contains": [],
         "specific": {
-          "name": "duraark/workbench-ui:0.5.1",
+          "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
           "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
           "ignored": [
             ".build"
@@ -52,7 +53,8 @@
           "execute": {
             "args": "-p 443:4200 -d",
             "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
-          }
+          },
+          "commit": "6e21f4d0f6c5a2e61609e6fa23b162930209a9e5"
         }
       }
     },
