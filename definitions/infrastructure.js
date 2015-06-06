@@ -11,7 +11,8 @@ exports.sip = {
     }
   },
   specific: {
-    repositoryUrl: 'https://github.com/duraark/microservice-sip.git',
+    //repositoryUrl: 'https://github.com/duraark/microservice-sip.git',
+    name: 'duraark/workbench-ui@0.5.1',
     processBuild: 'npm install',
     execute: {
       args: '-p 5104:5004 -d',
