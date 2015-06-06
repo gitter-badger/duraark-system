@@ -11,7 +11,7 @@
     {
       "type": "docker",
       "specific": {
-        "name": "duraark/workbench-ui@0.5.1:latest",
+        "name": "duraark/workbench-ui_0.5.1:latest",
         "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
         "ignored": [
           ".build"
@@ -21,7 +21,7 @@
           "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
         }
       },
-      "id": "web$duraark.workbench.ui@0.5.1_latest",
+      "id": "web$duraark.workbench.ui_0.5.1_latest",
       "name": "web"
     }
   ],
@@ -33,18 +33,18 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "web-306968a5$duraark.workbench.ui@0.5.1_latest"
+          "web-306968a5$duraark.workbench.ui_0.5.1_latest"
         ],
         "specific": {}
       },
-      "web-306968a5$duraark.workbench.ui@0.5.1_latest": {
-        "id": "web-306968a5$duraark.workbench.ui@0.5.1_latest",
+      "web-306968a5$duraark.workbench.ui_0.5.1_latest": {
+        "id": "web-306968a5$duraark.workbench.ui_0.5.1_latest",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "web$duraark.workbench.ui@0.5.1_latest",
+        "containerDefinitionId": "web$duraark.workbench.ui_0.5.1_latest",
         "type": "docker",
         "contains": [],
         "specific": {
-          "name": "duraark/workbench-ui@0.5.1:latest",
+          "name": "duraark/workbench-ui_0.5.1:latest",
           "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
           "ignored": [
             ".build"

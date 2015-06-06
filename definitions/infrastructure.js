@@ -28,7 +28,7 @@ exports.web = {
     }
   },
   specific: {
-    name: 'duraark/workbench-ui@0.5.1',
+    name: 'duraark/workbench-ui_0.5.1',
     //repositoryUrl: 'https://github.com/duraark/workbench-ui.git',
     processBuild: 'npm install; npm install bower; node_modules/.bin/bower install',
     ignored: ['.build'],
