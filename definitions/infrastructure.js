@@ -11,8 +11,7 @@ exports.sip = {
     }
   },
   specific: {
-    //repositoryUrl: 'https://github.com/duraark/microservice-sip.git',
-    name: 'duraark/workbench-ui@0.5.1',
+    repositoryUrl: 'https://github.com/duraark/microservice-sip.git',
     processBuild: 'npm install',
     execute: {
       args: '-p 5104:5004 -d',
@@ -29,7 +28,8 @@ exports.web = {
     }
   },
   specific: {
-    repositoryUrl: 'https://github.com/duraark/workbench-ui.git',
+    name: 'duraark/workbench-ui@0.5.1',
+    //repositoryUrl: 'https://github.com/duraark/workbench-ui.git',
     processBuild: 'npm install; npm install bower; node_modules/.bin/bower install',
     ignored: ['.build'],
     execute: {
