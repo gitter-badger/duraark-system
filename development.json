@@ -20,9 +20,9 @@
           "args": "-p 443:4200 -d",
           "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
         },
-        "commit": "277ac8051c6cdd0c011856da0e40bab709940f88"
+        "commit": "a2106a0c575570158e32a10d4f792cf45f3caa31"
       },
-      "id": "web$277ac8051c6cdd0c011856da0e40bab709940f88",
+      "id": "web$a2106a0c575570158e32a10d4f792cf45f3caa31",
       "name": "web"
     }
   ],
@@ -34,14 +34,14 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "web-306968a5$277ac8051c6cdd0c011856da0e40bab709940f88"
+          "web-306968a5$a2106a0c575570158e32a10d4f792cf45f3caa31"
         ],
         "specific": {}
       },
-      "web-306968a5$277ac8051c6cdd0c011856da0e40bab709940f88": {
-        "id": "web-306968a5$277ac8051c6cdd0c011856da0e40bab709940f88",
+      "web-306968a5$a2106a0c575570158e32a10d4f792cf45f3caa31": {
+        "id": "web-306968a5$a2106a0c575570158e32a10d4f792cf45f3caa31",
         "containedBy": "root-24a2726d",
-        "containerDefinitionId": "web$277ac8051c6cdd0c011856da0e40bab709940f88",
+        "containerDefinitionId": "web$a2106a0c575570158e32a10d4f792cf45f3caa31",
         "type": "docker",
         "contains": [],
         "specific": {
@@ -54,7 +54,7 @@
             "args": "-p 443:4200 -d",
             "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
           },
-          "commit": "277ac8051c6cdd0c011856da0e40bab709940f88"
+          "commit": "a2106a0c575570158e32a10d4f792cf45f3caa31"
         }
       }
     },
