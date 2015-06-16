@@ -18,7 +18,7 @@
         ],
         "execute": {
           "args": "-p 443:4200 -d",
-          "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+          "process": "ember serve"
         },
         "commit": "ea158c09e96460632592a34dac840c62a735043f"
       },
@@ -52,7 +52,7 @@
           ],
           "execute": {
             "args": "-p 443:4200 -d",
-            "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+            "process": "ember serve"
           },
           "commit": "ea158c09e96460632592a34dac840c62a735043f"
         }
