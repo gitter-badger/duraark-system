@@ -1,0 +1,63 @@
+{
+  "name": "duraark",
+  "namespace": "fraunhofer",
+  "id": "df24db56-3e4e-4772-8cb9-9d2a3f99c211",
+  "containerDefinitions": [
+    {
+      "type": "blank-container",
+      "id": "root",
+      "name": "root"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
+        "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
+        "ignored": [
+          ".build"
+        ],
+        "execute": {
+          "args": "-p 443:4200 -d",
+          "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+        },
+        "commit": "ea158c09e96460632592a34dac840c62a735043f"
+      },
+      "id": "web$ea158c09e96460632592a34dac840c62a735043f",
+      "name": "web"
+    }
+  ],
+  "topology": {
+    "containers": {
+      "root-476fb171": {
+        "id": "root-476fb171",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "root",
+        "type": "blank-container",
+        "contains": [
+          "web-d473c53f$ea158c09e96460632592a34dac840c62a735043f"
+        ],
+        "specific": {}
+      },
+      "web-d473c53f$ea158c09e96460632592a34dac840c62a735043f": {
+        "id": "web-d473c53f$ea158c09e96460632592a34dac840c62a735043f",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "web$ea158c09e96460632592a34dac840c62a735043f",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/workbench-ui.git",
+          "processBuild": "npm install; npm install bower; node_modules/.bin/bower install",
+          "ignored": [
+            ".build"
+          ],
+          "execute": {
+            "args": "-p 443:4200 -d",
+            "process": "DURAARK_API_ENDPOINT=http://juliet.cgv.tugraz.at/api/v0.1 ember serve"
+          },
+          "commit": "ea158c09e96460632592a34dac840c62a735043f"
+        }
+      }
+    },
+    "name": "process"
+  }
+}
