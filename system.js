@@ -7,9 +7,9 @@ exports.id = 'df24db56-3e4e-4772-8cb9-9d2a3f99c211';
 
 exports.topology = {
   development: {
-    root: ['web']
+    root: ['workbenchui', 'files', 'ifcmetadata', 'e57metadata', 'sip', 'sda', 'semanticenrichment', 'sipgenerator']
   },
   process: {
-    root: ['web']
+    root: ['workbenchui', 'files', 'ifcmetadata', 'e57metadata', 'sip', 'sda', 'semanticenrichment', 'sipgenerator']
   }  
 };

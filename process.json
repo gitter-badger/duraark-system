@@ -22,8 +22,106 @@
         },
         "commit": "ea158c09e96460632592a34dac840c62a735043f"
       },
-      "id": "web$ea158c09e96460632592a34dac840c62a735043f",
-      "name": "web"
+      "id": "workbenchui$ea158c09e96460632592a34dac840c62a735043f",
+      "name": "workbenchui"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-files.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5001:5001 -d",
+          "process": "node app.js"
+        },
+        "commit": "4447114a8e5ca5670ff78c3264db37fa023af794"
+      },
+      "id": "files$4447114a8e5ca5670ff78c3264db37fa023af794",
+      "name": "files"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-ifcmetadata.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5002:5002 -d",
+          "process": "node app.js"
+        },
+        "commit": "e159fdbba2b63e572bdae7e72805575bdc8572ed"
+      },
+      "id": "ifcmetadata$e159fdbba2b63e572bdae7e72805575bdc8572ed",
+      "name": "ifcmetadata"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-e57metadata.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5003:5003 -d",
+          "process": "node app.js"
+        },
+        "commit": "ca00a823a876bbee9a26551c4822d4648a229c4b"
+      },
+      "id": "e57metadata$ca00a823a876bbee9a26551c4822d4648a229c4b",
+      "name": "e57metadata"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5004:5004 -d",
+          "process": "node app.js"
+        },
+        "commit": "b5c247932d1caaf671490d922124fdbef1f8f057"
+      },
+      "id": "sip$b5c247932d1caaf671490d922124fdbef1f8f057",
+      "name": "sip"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-sda.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5005:5005 -d",
+          "process": "node app.js"
+        },
+        "commit": "a15cb6d60d7e9619b9b3c94229a1de284da8ac24"
+      },
+      "id": "sda$a15cb6d60d7e9619b9b3c94229a1de284da8ac24",
+      "name": "sda"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-semanticenrichment.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5006:5006 -d",
+          "process": "node app.js"
+        },
+        "commit": "f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09"
+      },
+      "id": "semanticenrichment$f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09",
+      "name": "semanticenrichment"
+    },
+    {
+      "type": "process",
+      "specific": {
+        "repositoryUrl": "https://github.com/duraark/microservice-sipgenerator.git",
+        "processBuild": "npm install",
+        "execute": {
+          "args": "-p 5007:5007 -d",
+          "process": "node app.js"
+        },
+        "commit": "c551a5b600389b5ebe953c2052971c6574fcf5a3"
+      },
+      "id": "sipgenerator$c551a5b600389b5ebe953c2052971c6574fcf5a3",
+      "name": "sipgenerator"
     }
   ],
   "topology": {
@@ -34,14 +132,21 @@
         "containerDefinitionId": "root",
         "type": "blank-container",
         "contains": [
-          "web-d473c53f$ea158c09e96460632592a34dac840c62a735043f"
+          "workbenchui-d473c53f$ea158c09e96460632592a34dac840c62a735043f",
+          "files-a374f5a9$4447114a8e5ca5670ff78c3264db37fa023af794",
+          "ifcmetadata-3a7da413$e159fdbba2b63e572bdae7e72805575bdc8572ed",
+          "e57metadata-4d7a9485$ca00a823a876bbee9a26551c4822d4648a229c4b",
+          "sip-d31e0126$b5c247932d1caaf671490d922124fdbef1f8f057",
+          "sda-a41931b0$a15cb6d60d7e9619b9b3c94229a1de284da8ac24",
+          "semanticenrichment-3d10600a$f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09",
+          "sipgenerator-4a17509c$c551a5b600389b5ebe953c2052971c6574fcf5a3"
         ],
         "specific": {}
       },
-      "web-d473c53f$ea158c09e96460632592a34dac840c62a735043f": {
-        "id": "web-d473c53f$ea158c09e96460632592a34dac840c62a735043f",
+      "workbenchui-d473c53f$ea158c09e96460632592a34dac840c62a735043f": {
+        "id": "workbenchui-d473c53f$ea158c09e96460632592a34dac840c62a735043f",
         "containedBy": "root-476fb171",
-        "containerDefinitionId": "web$ea158c09e96460632592a34dac840c62a735043f",
+        "containerDefinitionId": "workbenchui$ea158c09e96460632592a34dac840c62a735043f",
         "type": "process",
         "contains": [],
         "specific": {
@@ -55,6 +160,118 @@
             "process": "ember serve"
           },
           "commit": "ea158c09e96460632592a34dac840c62a735043f"
+        }
+      },
+      "files-a374f5a9$4447114a8e5ca5670ff78c3264db37fa023af794": {
+        "id": "files-a374f5a9$4447114a8e5ca5670ff78c3264db37fa023af794",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "files$4447114a8e5ca5670ff78c3264db37fa023af794",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-files.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5001:5001 -d",
+            "process": "node app.js"
+          },
+          "commit": "4447114a8e5ca5670ff78c3264db37fa023af794"
+        }
+      },
+      "ifcmetadata-3a7da413$e159fdbba2b63e572bdae7e72805575bdc8572ed": {
+        "id": "ifcmetadata-3a7da413$e159fdbba2b63e572bdae7e72805575bdc8572ed",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "ifcmetadata$e159fdbba2b63e572bdae7e72805575bdc8572ed",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-ifcmetadata.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5002:5002 -d",
+            "process": "node app.js"
+          },
+          "commit": "e159fdbba2b63e572bdae7e72805575bdc8572ed"
+        }
+      },
+      "e57metadata-4d7a9485$ca00a823a876bbee9a26551c4822d4648a229c4b": {
+        "id": "e57metadata-4d7a9485$ca00a823a876bbee9a26551c4822d4648a229c4b",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "e57metadata$ca00a823a876bbee9a26551c4822d4648a229c4b",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-e57metadata.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5003:5003 -d",
+            "process": "node app.js"
+          },
+          "commit": "ca00a823a876bbee9a26551c4822d4648a229c4b"
+        }
+      },
+      "sip-d31e0126$b5c247932d1caaf671490d922124fdbef1f8f057": {
+        "id": "sip-d31e0126$b5c247932d1caaf671490d922124fdbef1f8f057",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "sip$b5c247932d1caaf671490d922124fdbef1f8f057",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-sip.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5004:5004 -d",
+            "process": "node app.js"
+          },
+          "commit": "b5c247932d1caaf671490d922124fdbef1f8f057"
+        }
+      },
+      "sda-a41931b0$a15cb6d60d7e9619b9b3c94229a1de284da8ac24": {
+        "id": "sda-a41931b0$a15cb6d60d7e9619b9b3c94229a1de284da8ac24",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "sda$a15cb6d60d7e9619b9b3c94229a1de284da8ac24",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-sda.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5005:5005 -d",
+            "process": "node app.js"
+          },
+          "commit": "a15cb6d60d7e9619b9b3c94229a1de284da8ac24"
+        }
+      },
+      "semanticenrichment-3d10600a$f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09": {
+        "id": "semanticenrichment-3d10600a$f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "semanticenrichment$f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-semanticenrichment.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5006:5006 -d",
+            "process": "node app.js"
+          },
+          "commit": "f9b1af7150d24918b6ecfb27bdf13e0dfe98ae09"
+        }
+      },
+      "sipgenerator-4a17509c$c551a5b600389b5ebe953c2052971c6574fcf5a3": {
+        "id": "sipgenerator-4a17509c$c551a5b600389b5ebe953c2052971c6574fcf5a3",
+        "containedBy": "root-476fb171",
+        "containerDefinitionId": "sipgenerator$c551a5b600389b5ebe953c2052971c6574fcf5a3",
+        "type": "process",
+        "contains": [],
+        "specific": {
+          "repositoryUrl": "https://github.com/duraark/microservice-sipgenerator.git",
+          "processBuild": "npm install",
+          "execute": {
+            "args": "-p 5007:5007 -d",
+            "process": "node app.js"
+          },
+          "commit": "c551a5b600389b5ebe953c2052971c6574fcf5a3"
         }
       }
     },
