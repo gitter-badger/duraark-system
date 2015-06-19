@@ -33,7 +33,7 @@ exports.files = {
     processBuild: 'npm install',
     execute: {
       args: '-p 5001:5001 -d',
-      process: 'node app.js'
+      process: 'node src/app.js'
     }
   }
 };
@@ -50,7 +50,7 @@ exports.ifcmetadata = {
     processBuild: 'npm install',
     execute: {
       args: '-p 5002:5002 -d',
-      process: 'node app.js'
+      process: 'node src/app.js'
     }
   }
 };
@@ -67,7 +67,7 @@ exports.e57metadata = {
     processBuild: 'npm install',
     execute: {
       args: '-p 5003:5003 -d',
-      process: 'node app.js'
+      process: 'node src/app.js'
     }
   }
 };

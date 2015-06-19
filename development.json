@@ -32,7 +32,7 @@
         "processBuild": "npm install",
         "execute": {
           "args": "-p 5001:5001 -d",
-          "process": "node app.js"
+          "process": "node src/app.js"
         },
         "commit": "4447114a8e5ca5670ff78c3264db37fa023af794"
       },
@@ -46,7 +46,7 @@
         "processBuild": "npm install",
         "execute": {
           "args": "-p 5002:5002 -d",
-          "process": "node app.js"
+          "process": "node src/app.js"
         },
         "commit": "e159fdbba2b63e572bdae7e72805575bdc8572ed"
       },
@@ -60,7 +60,7 @@
         "processBuild": "npm install",
         "execute": {
           "args": "-p 5003:5003 -d",
-          "process": "node app.js"
+          "process": "node src/app.js"
         },
         "commit": "ca00a823a876bbee9a26551c4822d4648a229c4b"
       },
@@ -173,7 +173,7 @@
           "processBuild": "npm install",
           "execute": {
             "args": "-p 5001:5001 -d",
-            "process": "node app.js"
+            "process": "node src/app.js"
           },
           "commit": "4447114a8e5ca5670ff78c3264db37fa023af794"
         }
@@ -189,7 +189,7 @@
           "processBuild": "npm install",
           "execute": {
             "args": "-p 5002:5002 -d",
-            "process": "node app.js"
+            "process": "node src/app.js"
           },
           "commit": "e159fdbba2b63e572bdae7e72805575bdc8572ed"
         }
@@ -205,7 +205,7 @@
           "processBuild": "npm install",
           "execute": {
             "args": "-p 5003:5003 -d",
-            "process": "node app.js"
+            "process": "node src/app.js"
           },
           "commit": "ca00a823a876bbee9a26551c4822d4648a229c4b"
         }
