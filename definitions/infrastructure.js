@@ -30,7 +30,7 @@ exports.files = {
   },
   specific: {
     repositoryUrl: 'https://github.com/duraark/microservice-files.git',
-    processBuild: 'npm install',
+    processBuild: 'cd src && npm install',
     execute: {
       args: '-p 5001:5001 -d',
       process: 'node src/app.js'
@@ -47,7 +47,7 @@ exports.ifcmetadata = {
   },
   specific: {
     repositoryUrl: 'https://github.com/duraark/microservice-ifcmetadata.git',
-    processBuild: 'npm install',
+    processBuild: 'cd src && npm install',
     execute: {
       args: '-p 5002:5002 -d',
       process: 'node src/app.js'
@@ -64,7 +64,7 @@ exports.e57metadata = {
   },
   specific: {
     repositoryUrl: 'https://github.com/duraark/microservice-e57metadata.git',
-    processBuild: 'npm install',
+    processBuild: 'cd src && npm install',
     execute: {
       args: '-p 5003:5003 -d',
       process: 'node src/app.js'
