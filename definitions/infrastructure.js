@@ -33,7 +33,8 @@ exports.files = {
     processBuild: 'cd src && npm install',
     execute: {
       args: '-p 5001:5001 -d',
-      process: 'node src/app.js'
+      process: 'node app.js',
+      cwd: 'src'
     }
   }
 };
@@ -50,7 +51,8 @@ exports.ifcmetadata = {
     processBuild: 'cd src && npm install',
     execute: {
       args: '-p 5002:5002 -d',
-      process: 'node src/app.js'
+      process: 'node app.js',
+      cwd: 'src'
     }
   }
 };
@@ -67,7 +69,8 @@ exports.e57metadata = {
     processBuild: 'cd src && npm install',
     execute: {
       args: '-p 5003:5003 -d',
-      process: 'node src/app.js'
+      process: 'node app.js',
+      cwd: 'src'
     }
   }
 };

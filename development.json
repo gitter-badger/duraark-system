@@ -32,7 +32,8 @@
         "processBuild": "cd src && npm install",
         "execute": {
           "args": "-p 5001:5001 -d",
-          "process": "node src/app.js"
+          "process": "node app.js",
+          "cwd": "src"
         },
         "commit": "4447114a8e5ca5670ff78c3264db37fa023af794"
       },
@@ -46,7 +47,8 @@
         "processBuild": "cd src && npm install",
         "execute": {
           "args": "-p 5002:5002 -d",
-          "process": "node src/app.js"
+          "process": "node app.js",
+          "cwd": "src"
         },
         "commit": "e159fdbba2b63e572bdae7e72805575bdc8572ed"
       },
@@ -60,7 +62,8 @@
         "processBuild": "cd src && npm install",
         "execute": {
           "args": "-p 5003:5003 -d",
-          "process": "node src/app.js"
+          "process": "node app.js",
+          "cwd": "src"
         },
         "commit": "ca00a823a876bbee9a26551c4822d4648a229c4b"
       },
@@ -173,7 +176,8 @@
           "processBuild": "cd src && npm install",
           "execute": {
             "args": "-p 5001:5001 -d",
-            "process": "node src/app.js"
+            "process": "node app.js",
+            "cwd": "src"
           },
           "commit": "4447114a8e5ca5670ff78c3264db37fa023af794"
         }
@@ -189,7 +193,8 @@
           "processBuild": "cd src && npm install",
           "execute": {
             "args": "-p 5002:5002 -d",
-            "process": "node src/app.js"
+            "process": "node app.js",
+            "cwd": "src"
           },
           "commit": "e159fdbba2b63e572bdae7e72805575bdc8572ed"
         }
@@ -205,7 +210,8 @@
           "processBuild": "cd src && npm install",
           "execute": {
             "args": "-p 5003:5003 -d",
-            "process": "node src/app.js"
+            "process": "node app.js",
+            "cwd": "src"
           },
           "commit": "ca00a823a876bbee9a26551c4822d4648a229c4b"
         }
