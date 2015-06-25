@@ -1,5 +1,7 @@
 #duraark
 
+[![Join the chat at https://gitter.im/DURAARK/duraark-system](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/DURAARK/duraark-system?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Holds the container definitions and system topolgy. Generated and managed by nscale.
 
 ## overview
